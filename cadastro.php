@@ -21,7 +21,7 @@
             <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
-                        <h1>Cadastre-s</h1>
+                        <h1>Cadastre-se</h1>
                     </div>
                 </div>
 
