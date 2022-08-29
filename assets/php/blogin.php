@@ -30,6 +30,10 @@ if(isset($_POST['email'],$_POST['password'])){
         });</script>"; 
     }
     else if(isset($db_email['email']) == "$email" && isset($db_password['password']) == "$password"){
+        $stm = $conexao-> prepare('INSERT INTO login_history(email,password) VALUES (:email,:password)');
+        $stm->bindParam('email', $email);
+        $stm->bindParam('password', $password);
+        $stm->execute();
         header("Refresh: 5;url=https://www.google.com");
         echo "<script type='text/javascript'>toastr.success('Login efetuado, você será redirecionado em 5 segundos!', 'Situação', {
             'closeButton': true,
